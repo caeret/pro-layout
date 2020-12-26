@@ -15,7 +15,8 @@ const SiderMenuWrapper = {
     const {
       layout,
       isMobile,
-      collapsed
+      collapsed,
+      siderWidth
     } = this
     const isTopMenu = layout === 'topmenu'
     const handleCollapse = (e) => {
@@ -29,6 +30,7 @@ const SiderMenuWrapper = {
         maskClosable
         getContainer={null}
         onClose={handleCollapse}
+        width={siderWidth ? siderWidth : 256}
         bodyStyle={{
           padding: 0,
           height: '100vh'
